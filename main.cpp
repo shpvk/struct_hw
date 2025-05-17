@@ -60,7 +60,15 @@ void print_machine(Washing_machine* machine)
     std::cout << "width: " <<machine->width << " length " << machine->length << " height: " << machine->height <<
        " power: " << machine->power << " spin speed: " << machine->spin_speed << " heating_temperature: " << machine->heating_temperature << std::endl; 
 }
+void free_array(Washing_machine* machine)
+{
+delete[] machine->brand;
+delete[] machine->color;
+delete machine;
 
+
+
+}
 int main()
 {
     Washing_machine* m1 = new Washing_machine();
